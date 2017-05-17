@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Books Management</title>
+</head>
+<body>
+  <h1>Books Management</h1>
+  <a href="/insert">Insert Book</a>
+  <hr />
+  <table width="100%" border="1">
+    <tr>
+      <th>delete</th>
+      <th>edit</th>
+      <th>book_id</th>
+      <th>isbn10</th>
+      <th>isbn13</th>
+      <th>title</th>
+    </tr>
+    <% data.forEach(function (item, index) { %>
+    <tr>
+      <td><a href="/delete/<%= item.book_id %>">delete</a></td>
+      <td><a href="/edit/<%= item.book_id %>">edit</a></td>
+      <td><%= item.book_id %></td>
+      <td><%= item.isbn10 %></td>
+      <td><%= item.isbn13 %></td>
+      <td><%= item.title %></td>
+    </tr>
+    <% }); %>
+  </table>
+</body>
+</html>

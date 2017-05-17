@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Book</title>
+</head>
+<body>
+  <h1>Edit Book</h1>
+  <hr />
+  <form method="post">
+    <fieldset>
+      <legend>Edit Book</legend>
+      <table>
+        <tr>
+          <td><label>book_id</label></td>
+          <td><input type="text" name="book_id" value="<%= data.book_id %>" disabled /></td>
+        </tr>
+        <tr>
+          <td><label>isbn10</label></td>
+          <td><input type="text" name="isbn10" value="<%= data.isbn10 %>" /></td>
+        </tr>
+        <tr>
+          <td><label>isbn13</label></td>
+          <td><input type="text" name="isbn13" value="<%= data.isbn13 %>" /></td>
+        </tr>
+        <tr>
+          <td><label>title</label></td>
+          <td><input type="text" name="title" value="<%= data.title %>" /></td>
+        </tr>
+      </table>
+      <input type="submit" />
+    </fieldset>
+  </form>
+</body>
+</html>
