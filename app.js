@@ -61,6 +61,20 @@ app.get('/', function (request, response) {
   });
 });
 
+// 라우트를 수행합니다.
+app.get('/books', function (request, response) {
+    // 데이터베이스 쿼리를 실행합니다.
+    client.query('SELECT * FROM books', function (error, results) {
+
+	  if(error){
+		console.log(error);
+	  }
+
+      // 응답합니다.
+      response.send(results);
+    });
+});
+
 app.get('/delete/:book_id', function (request, response) {
   // 데이터베이스 쿼리를 실행합니다.
   client.query('DELETE FROM books WHERE book_id=?', [request.params.book_id], function (error) {
