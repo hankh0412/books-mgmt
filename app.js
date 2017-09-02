@@ -61,7 +61,7 @@ app.get('/', function (request, response) {
   });
 });
 
-// 라우트를 수행합니다.
+// 책 목록
 app.get('/books', function (request, response) {
     // 데이터베이스 쿼리를 실행합니다.
     client.query('SELECT * FROM books', function (error, results) {
